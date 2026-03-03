@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hafiz Realty | UAE & Pakistan</title>
-  <meta name="description" content="Hafiz Realty — Premium real estate presence across UAE & Pakistan." />
+  <meta name="description" content="Hafiz Realty — Real estate services and opportunities across UAE & Pakistan." />
   <style>
     :root{
       --bg:#070b14;
@@ -55,6 +55,7 @@
       background: rgba(255,255,255,.06);
       padding:8px 10px;border-radius:999px;
       color:var(--muted); font-size:13px; font-weight:700;
+      white-space: nowrap;
     }
 
     .hero{padding:44px 0 14px}
@@ -68,7 +69,7 @@
       margin-top:14px;
       color:var(--muted);
       font-size:17px;
-      max-width: 68ch;
+      max-width: 70ch;
     }
 
     .grid{
@@ -91,7 +92,7 @@
     .card .inner{ padding:18px; position:relative; z-index:2; }
     .k{color:var(--muted);font-size:13px;font-weight:800;letter-spacing:.2px}
     .t{margin-top:8px;font-size:22px;font-weight:900}
-    .d{margin-top:10px;color:var(--muted);font-size:14px;max-width: 52ch}
+    .d{margin-top:10px;color:var(--muted);font-size:14px;max-width: 56ch}
     .btnrow{margin-top:16px; display:flex; gap:10px; flex-wrap:wrap}
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
@@ -100,6 +101,7 @@
       border:1px solid rgba(255,255,255,.16);
       background: rgba(255,255,255,.06);
       transition:.2s;
+      white-space: nowrap;
     }
     .btn:hover{ background: rgba(255,255,255,.10); }
     .btn.primary{
@@ -109,23 +111,25 @@
       box-shadow: 0 22px 55px rgba(245,158,11,.16);
     }
 
-    /* subtle “skyline vibe” blocks on cards */
     .sky{
       position:absolute; inset:auto 0 0 0; height: 54%;
       opacity:.65;
-      filter: blur(0px);
       transform: translateY(10px);
       z-index:1;
     }
-    .uaeGrad{ background: radial-gradient(500px 240px at 70% 20%, rgba(245,158,11,.28), transparent 60%),
-                       radial-gradient(620px 280px at 35% 35%, rgba(59,130,246,.20), transparent 60%); }
-    .pkGrad{  background: radial-gradient(520px 240px at 40% 25%, rgba(34,197,94,.20), transparent 62%),
-                       radial-gradient(620px 280px at 70% 40%, rgba(59,130,246,.16), transparent 62%); }
+    .uaeGrad{
+      background: radial-gradient(500px 240px at 70% 20%, rgba(245,158,11,.28), transparent 60%),
+                  radial-gradient(620px 280px at 35% 35%, rgba(59,130,246,.20), transparent 60%);
+    }
+    .pkGrad{
+      background: radial-gradient(520px 240px at 40% 25%, rgba(34,197,94,.20), transparent 62%),
+                  radial-gradient(620px 280px at 70% 40%, rgba(59,130,246,.16), transparent 62%);
+    }
 
-    .miniSkyline{
+    .miniShape{
       position:absolute; left:0; right:0; bottom:-10px;
       height: 190px;
-      opacity:.18;
+      opacity:.16;
       pointer-events:none;
     }
 
@@ -156,41 +160,41 @@
   </header>
 
   <main class="container hero">
-    <h1>Choose your market.</h1>
+    <h1>Real estate services across UAE & Pakistan.</h1>
     <div class="sub">
-      A premium real-estate presence across the UAE and Pakistan. Explore pages designed with skyline-style visuals
-      (Dubai for UAE, Islamabad for Pakistan) — clean, modern, and fast.
+      Hafiz Realty supports clients and investors with property opportunities and advisory services across both markets.
+      Choose a market below to explore categories and featured opportunities.
     </div>
 
     <div class="grid">
       <a class="card" href="uae.html" aria-label="UAE Properties">
         <div class="sky uaeGrad"></div>
-        <svg class="miniSkyline" viewBox="0 0 1200 240" preserveAspectRatio="none">
+        <svg class="miniShape" viewBox="0 0 1200 240" preserveAspectRatio="none" aria-hidden="true">
           <path fill="white" d="M0 220V180h50v-30h25v20h30v-70h18v-30h18v110h22v-60h20v100h35v-90h22v-45h30v135h18v-70h25v90h30v-120h22v30h18v110h40v-50h18v70h30v-140h22v160h22v-55h18v75h45v-95h22v115h70v-40h28v60h60V220H0z"/>
         </svg>
         <div class="inner">
           <div class="k">Market</div>
           <div class="t">UAE Properties</div>
-          <div class="d">Dubai / Abu Dhabi focus — skyline-inspired look, luxury feel, simple sections.</div>
+          <div class="d">Apartments, villas, and commercial options with a premium, clean presentation.</div>
           <div class="btnrow">
-            <span class="btn primary">Open UAE Page</span>
-            <span class="btn">View sections</span>
+            <span class="btn primary">Explore UAE</span>
+            <span class="btn">View opportunities</span>
           </div>
         </div>
       </a>
 
       <a class="card" href="pakistan.html" aria-label="Pakistan Properties">
         <div class="sky pkGrad"></div>
-        <svg class="miniSkyline" viewBox="0 0 1200 240" preserveAspectRatio="none">
+        <svg class="miniShape" viewBox="0 0 1200 240" preserveAspectRatio="none" aria-hidden="true">
           <path fill="white" d="M0 220V190h60v-40h22v20h26v-70h18v-20h18v90h35v-60h22v90h28v-110h18v30h18v80h30v-40h18v60h26v-130h22v150h30v-80h18v100h38v-50h18v70h45v-60h22v80h70v-35h30v55h80V220H0z"/>
         </svg>
         <div class="inner">
           <div class="k">Market</div>
           <div class="t">Pakistan Properties</div>
-          <div class="d">Islamabad / Lahore / Karachi — skyline-style visuals with a clean corporate layout.</div>
+          <div class="d">Residential and commercial opportunities across major cities with a professional layout.</div>
           <div class="btnrow">
-            <span class="btn primary">Open Pakistan Page</span>
-            <span class="btn">View sections</span>
+            <span class="btn primary">Explore Pakistan</span>
+            <span class="btn">View opportunities</span>
           </div>
         </div>
       </a>
