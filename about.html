@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About | Hafiz Realty</title>
-  <meta name="description" content="About Hafiz Realty — UAE & Pakistan real estate presence." />
+  <meta name="description" content="About Hafiz Realty — A Hafiz Trading Group brand operating across UAE & Pakistan." />
   <style>
     :root{
       --bg:#070b14;
@@ -47,6 +47,17 @@
       box-shadow: 0 18px 50px rgba(59,130,246,.18);
       color:#070b14;
     }
+    .badge{
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      padding:7px 10px;
+      border-radius:999px;
+      color:rgba(255,255,255,.74);
+      font-size:12px;
+      font-weight:850;
+      white-space: nowrap;
+    }
+
     nav{display:flex;gap:10px; color:var(--muted); font-weight:650; font-size:14px}
     nav a{padding:8px 10px;border-radius:12px;transition:.2s}
     nav a:hover{background:rgba(255,255,255,.07);color:var(--text)}
@@ -60,7 +71,29 @@
       padding: 22px;
     }
     h1{margin:0;font-size: clamp(30px,4vw,48px); letter-spacing:-.8px; line-height:1.06}
-    p{margin:12px 0 0; color:var(--muted); font-size:16px; max-width: 75ch}
+    p{margin:12px 0 0; color:var(--muted); font-size:16px; max-width: 78ch}
+
+    .linkline{
+      margin-top: 12px;
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      color: rgba(255,255,255,.72);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .linkpill{
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      padding:8px 10px;
+      border-radius:999px;
+    }
+    .linkpill a{
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     .grid{
       margin-top: 16px;
       display:grid;
@@ -76,11 +109,27 @@
     .card h3{margin:0;font-size:16px}
     .card p{margin:10px 0 0;font-size:14px}
 
+    .miniGrid{
+      margin-top: 14px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .mini{
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      border-radius: 16px;
+      padding: 14px;
+    }
+    .mini .t{font-weight:900}
+    .mini .d{margin-top:6px;color:var(--muted);font-size:13px}
+
     footer{padding:22px 0 28px; color:rgba(255,255,255,.58); font-size:13px; text-align:center}
 
     @media (max-width: 900px){
       nav{display:none}
       .grid{grid-template-columns:1fr}
+      .miniGrid{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -90,6 +139,7 @@
       <div class="brand">
         <div class="logo">HR</div>
         <div>Hafiz Realty</div>
+        <span class="badge">Part of Hafiz Trading Group</span>
       </div>
       <nav>
         <a href="index.html">Home</a>
@@ -104,26 +154,48 @@
     <div class="box">
       <h1>About Hafiz Realty</h1>
       <p>
-        Hafiz Realty is building a trusted real estate presence across the UAE and Pakistan.
-        The goal is simple: clear communication, professional guidance, and smooth transactions in both markets.
+        Hafiz Realty is a real estate division operating under the <b>Hafiz Trading Group</b>.
+        We focus on opportunities across the <b>UAE</b> and <b>Pakistan</b>, bringing the group’s standards of
+        trust, transparency, and long-term relationships into property advisory and listings.
       </p>
+
+      <div class="linkline">
+        <span class="linkpill">Group Website: <a href="https://hafiztrading.com" target="_blank" rel="noopener">hafiztrading.com</a></span>
+        <span class="linkpill">Markets: UAE • Pakistan</span>
+        <span class="linkpill">Status: Launching</span>
+      </div>
 
       <div class="grid">
         <div class="card">
           <h3>UAE Focus</h3>
-          <p>Dubai & Abu Dhabi — residential and commercial opportunities, investor-friendly support.</p>
+          <p>Dubai & Abu Dhabi — residential and commercial opportunities with a premium presentation.</p>
         </div>
         <div class="card">
           <h3>Pakistan Focus</h3>
-          <p>Islamabad, Lahore, Karachi — quality listings and market guidance with a professional approach.</p>
+          <p>Islamabad, Lahore, Karachi — listings and market guidance with a professional approach.</p>
+        </div>
+        <div class="card">
+          <h3>Group Standards</h3>
+          <p>Backed by Hafiz Trading: clear communication, reliable dealing, and a reputation-first mindset.</p>
         </div>
         <div class="card">
           <h3>What’s Next</h3>
-          <p>Add real listings, images, and pricing. This site is designed to scale without changing the style.</p>
+          <p>Add real listings, images, and locations. The design is built to scale without changing the style.</p>
         </div>
-        <div class="card">
-          <h3>Clean & Fast</h3>
-          <p>Static pages (GitHub Pages) = fast loading, secure HTTPS, and free hosting.</p>
+      </div>
+
+      <div class="miniGrid" aria-label="Group Portfolio">
+        <div class="mini">
+          <div class="t">Hafiz Trading</div>
+          <div class="d">Parent group brand</div>
+        </div>
+        <div class="mini">
+          <div class="t">Hafiz Realty</div>
+          <div class="d">Real estate division</div>
+        </div>
+        <div class="mini">
+          <div class="t">More Divisions</div>
+          <div class="d">Launching soon</div>
         </div>
       </div>
     </div>
