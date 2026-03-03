@@ -1,144 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | Hafiz Realty</title>
-  <meta name="description" content="About Hafiz Realty — Part of Hafiz Group (established 2004), operating across UAE & Pakistan." />
-  <style>
-    :root{
-      --bg:#070b14;
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.68);
-      --stroke: rgba(255,255,255,.14);
-      --card: rgba(255,255,255,.06);
-      --shadow: 0 22px 70px rgba(0,0,0,.45);
-      --r: 18px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(900px 520px at 15% 10%, rgba(139,92,246,.18), transparent 55%),
-        radial-gradient(900px 520px at 85% 20%, rgba(59,130,246,.16), transparent 55%),
-        var(--bg);
-      min-height:100vh;
-    }
-    a{color:inherit;text-decoration:none}
-    .container{width:min(950px,92vw);margin:0 auto}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About | Hafiz Realty</title>
+<meta name="description" content="Hafiz Realty — Part of Hafiz Group, built on Hafiz Trading (est. 2004) trust and standards." />
 
-    header{
-      position:sticky; top:0; z-index:20;
-      backdrop-filter: blur(14px);
-      background: rgba(7,11,20,.55);
-      border-bottom: 1px solid rgba(255,255,255,.10);
-    }
-    .top{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0; gap:12px;
-    }
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
-    .logo{
-      width:38px;height:38px;border-radius:12px;
-      display:grid;place-items:center;font-weight:900;
-      background: linear-gradient(135deg, rgba(59,130,246,.95), rgba(139,92,246,.95));
-      box-shadow: 0 18px 50px rgba(59,130,246,.18);
-      color:#070b14;
-    }
-    .badge{
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      padding:7px 10px;
-      border-radius:999px;
-      color:rgba(255,255,255,.74);
-      font-size:12px;
-      font-weight:850;
-      white-space: nowrap;
-    }
+<style>
+  :root{
+    --text:#ffffff;
+    --muted:rgba(255,255,255,.82);
+    --stroke:rgba(255,255,255,.16);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    color:var(--text);
+    background:linear-gradient(135deg,#1e3c72,#2a5298,#6a11cb,#2575fc);
+    background-size:400% 400%;
+    animation:bgMove 15s ease infinite;
+    min-height:100vh;
+  }
+  @keyframes bgMove{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
 
-    nav{display:flex;gap:10px; color:var(--muted); font-weight:650; font-size:14px}
-    nav a{padding:8px 10px;border-radius:12px;transition:.2s}
-    nav a:hover{background:rgba(255,255,255,.07);color:var(--text)}
+  a{color:inherit;text-decoration:none}
+  .container{width:min(1100px,92vw);margin:auto}
 
-    .wrap{padding: 30px 0 24px}
-    .box{
-      border:1px solid var(--stroke);
-      background: var(--card);
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
-      padding: 22px;
-    }
-    h1{margin:0;font-size: clamp(30px,4vw,48px); letter-spacing:-.8px; line-height:1.06}
-    p{margin:12px 0 0; color:var(--muted); font-size:16px; max-width: 78ch}
+  header{
+    padding:20px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+  }
+  .logo{
+    font-weight:900;
+    font-size:20px;
+    letter-spacing:1px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    white-space:nowrap;
+  }
+  .badge{
+    border:1px solid rgba(255,255,255,.18);
+    background:rgba(0,0,0,.18);
+    padding:6px 10px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:800;
+    color:rgba(255,255,255,.9);
+  }
+  nav a{
+    margin-left:15px;
+    font-weight:650;
+    opacity:.95;
+  }
+  nav a:hover{opacity:.7}
 
-    .linkline{
-      margin-top: 12px;
-      display:flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items:center;
-      color: rgba(255,255,255,.72);
-      font-size: 13px;
-      font-weight: 800;
-    }
-    .linkpill{
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      padding:8px 10px;
-      border-radius:999px;
-    }
-    .linkpill a{
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
+  /* Hero */
+  .hero{
+    margin-top:10px;
+    border-radius:22px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.14);
+    position:relative;
+    box-shadow: 0 24px 80px rgba(0,0,0,.40);
+    background:
+      linear-gradient(120deg, rgba(0,0,0,.62), rgba(0,0,0,.18)),
+      url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1800&auto=format&fit=crop') center/cover no-repeat;
+  }
+  .heroInner{
+    padding:44px 22px 26px;
+  }
+  .hero h1{
+    margin:0;
+    font-size:clamp(32px,4.6vw,56px);
+    line-height:1.06;
+    letter-spacing:-.8px;
+  }
+  .hero p{
+    margin:14px 0 0;
+    font-size:17px;
+    color:var(--muted);
+    max-width: 78ch;
+  }
 
-    .grid{
-      margin-top: 16px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-    .card{
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      border-radius: var(--r);
-      padding: 18px;
-    }
-    .card h3{margin:0;font-size:16px}
-    .card p{margin:10px 0 0;font-size:14px}
+  .chips{
+    margin-top:16px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .chip{
+    border:1px solid rgba(255,255,255,.18);
+    background:rgba(0,0,0,.18);
+    padding:8px 10px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:800;
+    color:rgba(255,255,255,.88);
+  }
 
-    .miniGrid{
-      margin-top: 14px;
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
-    .mini{
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
-      border-radius: 16px;
-      padding: 14px;
-    }
-    .mini .t{font-weight:900}
-    .mini .d{margin-top:6px;color:var(--muted);font-size:13px}
+  /* Content panels */
+  .grid2{
+    margin:22px 0 18px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:18px;
+    align-items:stretch;
+  }
+  .panel{
+    border:1px solid rgba(255,255,255,.14);
+    background:rgba(0,0,0,.18);
+    border-radius:18px;
+    padding:18px;
+    box-shadow: 0 14px 40px rgba(0,0,0,.22);
+  }
+  .panel h2{
+    margin:0;
+    font-size:18px;
+    letter-spacing:.2px;
+  }
+  .panel p{
+    margin:10px 0 0;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.7;
+  }
 
-    footer{padding:22px 0 28px; color:rgba(255,255,255,.58); font-size:13px; text-align:center}
+  /* Cards */
+  .sectionTitle{
+    margin:8px 0 12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:10px;
+  }
+  .sectionTitle h2{
+    margin:0;
+    font-size:18px;
+    letter-spacing:.2px;
+  }
+  .sectionTitle span{
+    font-size:13px;
+    color:rgba(255,255,255,.75);
+    font-weight:800;
+  }
 
-    @media (max-width: 900px){
-      nav{display:none}
-      .grid{grid-template-columns:1fr}
-      .miniGrid{grid-template-columns:1fr}
-    }
-  </style>
+  .cards{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:18px;
+    margin-bottom: 26px;
+  }
+  .card{
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+    min-height:320px;
+    display:flex;
+    align-items:flex-end;
+    padding:18px;
+    border:1px solid rgba(255,255,255,.14);
+    box-shadow: 0 18px 60px rgba(0,0,0,.35);
+    transition: transform .25s ease;
+  }
+  .card:hover{transform: scale(1.02);}
+  .overlay{
+    position:absolute;
+    inset:0;
+    background: linear-gradient(to top, rgba(0,0,0,.86), rgba(0,0,0,.18));
+  }
+  .content{
+    position:relative;
+    z-index:2;
+  }
+  .content h3{
+    margin:0;
+    font-size:20px;
+  }
+  .content p{
+    margin:8px 0 0;
+    color:rgba(255,255,255,.86);
+    font-size:14px;
+    line-height:1.5;
+  }
+  .tagrow{
+    margin-top:12px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .tag{
+    border:1px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.06);
+    padding:6px 9px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:850;
+    color:rgba(255,255,255,.88);
+  }
+
+  footer{
+    text-align:center;
+    padding:26px 0 30px;
+    font-size:14px;
+    color:rgba(255,255,255,.82);
+  }
+
+  @media(max-width: 980px){
+    .grid2{grid-template-columns:1fr}
+    .cards{grid-template-columns:1fr}
+    nav{display:none}
+  }
+</style>
 </head>
+
 <body>
-  <header>
-    <div class="container top">
-      <div class="brand">
-        <div class="logo">HR</div>
-        <div>Hafiz Realty</div>
+  <div class="container">
+
+    <header>
+      <div class="logo">
+        Hafiz Realty
         <span class="badge">Part of Hafiz Group</span>
       </div>
       <nav>
@@ -147,65 +236,102 @@
         <a href="pakistan.html">Pakistan</a>
         <a href="about.html">About</a>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main class="container wrap">
-    <div class="box">
-      <h1>About Hafiz Realty</h1>
-      <p>
-        Hafiz Realty operates under <b>Hafiz Group</b> and provides real estate support across the <b>UAE</b> and <b>Pakistan</b>.
-        Built on the same trust and long-term service standards of <b>Hafiz Trading (established in 2004)</b>, our focus is professional service,
-        clear communication, and trusted dealing.
-      </p>
+    <section class="hero">
+      <div class="heroInner">
+        <h1>About Hafiz Realty</h1>
+        <p>
+          Hafiz Realty operates under <b>Hafiz Group</b>, providing real estate support across the <b>UAE</b> and <b>Pakistan</b>.
+          We are built on the same trust and long-term service standards of <b>Hafiz Trading (established in 2004)</b> —
+          focused on professional service, clear communication, and trusted dealing.
+        </p>
 
-      <div class="linkline">
-        <span class="linkpill">Group Website: <a href="https://hafiztrading.com" target="_blank" rel="noopener">hafiztrading.com</a></span>
-        <span class="linkpill">Established: 2004</span>
-        <span class="linkpill">Markets: UAE • Pakistan</span>
-        <span class="linkpill">Division: Real Estate</span>
-      </div>
-
-      <div class="grid">
-        <div class="card">
-          <h3>What We Do</h3>
-          <p>Buying, selling, rentals, and market guidance for residential and commercial properties.</p>
-        </div>
-        <div class="card">
-          <h3>How We Work</h3>
-          <p>Shortlist opportunities, review details, and proceed with step-by-step support.</p>
-        </div>
-        <div class="card">
-          <h3>UAE Market</h3>
-          <p>Opportunities across key locations, presented in a premium, easy-to-browse layout.</p>
-        </div>
-        <div class="card">
-          <h3>Pakistan Market</h3>
-          <p>Residential and commercial opportunities across major cities, structured for clarity.</p>
+        <div class="chips">
+          <div class="chip">Established Trust</div>
+          <div class="chip">UAE • Pakistan</div>
+          <div class="chip">Commercial & Residential</div>
+          <div class="chip">Professional Support</div>
         </div>
       </div>
+    </section>
 
-      <div class="miniGrid" aria-label="Group Portfolio">
-        <div class="mini">
-          <div class="t">Hafiz Group</div>
-          <div class="d">Parent group brand (est. 2004)</div>
-        </div>
-        <div class="mini">
-          <div class="t">Hafiz Realty</div>
-          <div class="d">Real estate division</div>
-        </div>
-        <div class="mini">
-          <div class="t">Group Portfolio</div>
-          <div class="d">Multiple business activities</div>
-        </div>
+    <section class="grid2">
+      <div class="panel">
+        <h2>Our Focus</h2>
+        <p>
+          We help clients and investors explore real estate opportunities with a clean, structured experience.
+          In the UAE, our focus includes commercial properties such as office spaces, shops, and warehouses.
+          In Pakistan, we support residential and commercial opportunities across major cities.
+        </p>
       </div>
+
+      <div class="panel">
+        <h2>Group Connection</h2>
+        <p>
+          <b>Hafiz Group</b> represents trusted business activity built over time.
+          Hafiz Realty carries forward the group’s standards of reliability, transparency, and long-term relationships.
+        </p>
+        <p style="margin-top:10px;">
+          Group Website: <a href="https://hafiztrading.com" target="_blank" rel="noopener" style="text-decoration:underline; text-underline-offset:3px;">hafiztrading.com</a>
+        </p>
+      </div>
+    </section>
+
+    <div class="sectionTitle">
+      <h2>What We Support</h2>
+      <span>Services & markets</span>
     </div>
 
-    <footer>© <span id="y"></span> Hafiz Realty</footer>
-  </main>
+    <section class="cards">
+      <div class="card" style="background:url('https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;">
+        <div class="overlay"></div>
+        <div class="content">
+          <h3>Commercial Properties</h3>
+          <p>Office spaces, shops, and warehouses with professional support and clarity.</p>
+          <div class="tagrow">
+            <span class="tag">Offices</span>
+            <span class="tag">Shops</span>
+            <span class="tag">Warehouses</span>
+          </div>
+        </div>
+      </div>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+      <div class="card" style="background:url('https://images.unsplash.com/photo-1560185008-b033106af5d6?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;">
+        <div class="overlay"></div>
+        <div class="content">
+          <h3>Residential Options</h3>
+          <p>Homes, apartments, and family living opportunities across key locations.</p>
+          <div class="tagrow">
+            <span class="tag">Homes</span>
+            <span class="tag">Apartments</span>
+            <span class="tag">Villas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="background:url('https://images.unsplash.com/photo-1508057198894-247b23fe5ade?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;">
+        <div class="overlay"></div>
+        <div class="content">
+          <h3>Advisory Support</h3>
+          <p>Shortlisting, market guidance, and step-by-step support through next steps.</p>
+          <div class="tagrow">
+            <span class="tag">Shortlist</span>
+            <span class="tag">Guidance</span>
+            <span class="tag">Support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Hafiz Realty — Part of Hafiz Group
+    </footer>
+
+  </div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
