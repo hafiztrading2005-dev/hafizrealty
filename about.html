@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Hafiz Realty</title>
+  <meta name="description" content="About Hafiz Realty — UAE & Pakistan real estate presence." />
+  <style>
+    :root{
+      --bg:#070b14;
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --stroke: rgba(255,255,255,.14);
+      --card: rgba(255,255,255,.06);
+      --shadow: 0 22px 70px rgba(0,0,0,.45);
+      --r: 18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 520px at 15% 10%, rgba(139,92,246,.18), transparent 55%),
+        radial-gradient(900px 520px at 85% 20%, rgba(59,130,246,.16), transparent 55%),
+        var(--bg);
+      min-height:100vh;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(950px,92vw);margin:0 auto}
+
+    header{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: blur(14px);
+      background: rgba(7,11,20,.55);
+      border-bottom: 1px solid rgba(255,255,255,.10);
+    }
+    .top{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0; gap:12px;
+    }
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
+    .logo{
+      width:38px;height:38px;border-radius:12px;
+      display:grid;place-items:center;font-weight:900;
+      background: linear-gradient(135deg, rgba(59,130,246,.95), rgba(139,92,246,.95));
+      box-shadow: 0 18px 50px rgba(59,130,246,.18);
+      color:#070b14;
+    }
+    nav{display:flex;gap:10px; color:var(--muted); font-weight:650; font-size:14px}
+    nav a{padding:8px 10px;border-radius:12px;transition:.2s}
+    nav a:hover{background:rgba(255,255,255,.07);color:var(--text)}
+
+    .wrap{padding: 30px 0 24px}
+    .box{
+      border:1px solid var(--stroke);
+      background: var(--card);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+    h1{margin:0;font-size: clamp(30px,4vw,48px); letter-spacing:-.8px; line-height:1.06}
+    p{margin:12px 0 0; color:var(--muted); font-size:16px; max-width: 75ch}
+    .grid{
+      margin-top: 16px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .card{
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      border-radius: var(--r);
+      padding: 18px;
+    }
+    .card h3{margin:0;font-size:16px}
+    .card p{margin:10px 0 0;font-size:14px}
+
+    footer{padding:22px 0 28px; color:rgba(255,255,255,.58); font-size:13px; text-align:center}
+
+    @media (max-width: 900px){
+      nav{display:none}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container top">
+      <div class="brand">
+        <div class="logo">HR</div>
+        <div>Hafiz Realty</div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="uae.html">UAE</a>
+        <a href="pakistan.html">Pakistan</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container wrap">
+    <div class="box">
+      <h1>About Hafiz Realty</h1>
+      <p>
+        Hafiz Realty is building a trusted real estate presence across the UAE and Pakistan.
+        The goal is simple: clear communication, professional guidance, and smooth transactions in both markets.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>UAE Focus</h3>
+          <p>Dubai & Abu Dhabi — residential and commercial opportunities, investor-friendly support.</p>
+        </div>
+        <div class="card">
+          <h3>Pakistan Focus</h3>
+          <p>Islamabad, Lahore, Karachi — quality listings and market guidance with a professional approach.</p>
+        </div>
+        <div class="card">
+          <h3>What’s Next</h3>
+          <p>Add real listings, images, and pricing. This site is designed to scale without changing the style.</p>
+        </div>
+        <div class="card">
+          <h3>Clean & Fast</h3>
+          <p>Static pages (GitHub Pages) = fast loading, secure HTTPS, and free hosting.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>© <span id="y"></span> Hafiz Realty</footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
