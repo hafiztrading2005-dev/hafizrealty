@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hafiz Realty | UAE & Pakistan</title>
+  <meta name="description" content="Hafiz Realty — Premium real estate presence across UAE & Pakistan." />
+  <style>
+    :root{
+      --bg:#070b14;
+      --card: rgba(255,255,255,.08);
+      --stroke: rgba(255,255,255,.14);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --shadow: 0 22px 70px rgba(0,0,0,.45);
+      --r: 18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 520px at 15% 10%, rgba(59,130,246,.18), transparent 55%),
+        radial-gradient(900px 520px at 85% 20%, rgba(245,158,11,.16), transparent 55%),
+        radial-gradient(900px 520px at 60% 90%, rgba(139,92,246,.18), transparent 55%),
+        var(--bg);
+      min-height:100vh;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1100px,92vw);margin:0 auto}
+    header{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: blur(14px);
+      background: rgba(7,11,20,.55);
+      border-bottom: 1px solid rgba(255,255,255,.10);
+    }
+    .top{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0; gap:12px;
+    }
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
+    .logo{
+      width:38px;height:38px;border-radius:12px;
+      display:grid;place-items:center;font-weight:900;
+      background: linear-gradient(135deg, rgba(59,130,246,.95), rgba(139,92,246,.95));
+      box-shadow: 0 18px 50px rgba(59,130,246,.18);
+      color:#070b14;
+    }
+    nav{display:flex;gap:10px; color:var(--muted); font-weight:650; font-size:14px}
+    nav a{padding:8px 10px;border-radius:12px;transition:.2s}
+    nav a:hover{background:rgba(255,255,255,.07);color:var(--text)}
+    .pill{
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      padding:8px 10px;border-radius:999px;
+      color:var(--muted); font-size:13px; font-weight:700;
+    }
+
+    .hero{padding:44px 0 14px}
+    h1{
+      margin:0;
+      font-size: clamp(34px, 4.4vw, 56px);
+      line-height:1.05;
+      letter-spacing:-.8px;
+    }
+    .sub{
+      margin-top:14px;
+      color:var(--muted);
+      font-size:17px;
+      max-width: 68ch;
+    }
+
+    .grid{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    .card{
+      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,.06);
+      border-radius: var(--r);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      transition: transform .18s ease, background .2s ease, border-color .2s ease;
+      position: relative;
+      min-height: 260px;
+    }
+    .card:hover{ transform: translateY(-2px); background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.22); }
+    .card .inner{ padding:18px; position:relative; z-index:2; }
+    .k{color:var(--muted);font-size:13px;font-weight:800;letter-spacing:.2px}
+    .t{margin-top:8px;font-size:22px;font-weight:900}
+    .d{margin-top:10px;color:var(--muted);font-size:14px;max-width: 52ch}
+    .btnrow{margin-top:16px; display:flex; gap:10px; flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:11px 14px;border-radius:12px;
+      font-weight:800;font-size:14px;
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.06);
+      transition:.2s;
+    }
+    .btn:hover{ background: rgba(255,255,255,.10); }
+    .btn.primary{
+      border:0;
+      color:#070b14;
+      background: linear-gradient(135deg, rgba(245,158,11,.95), rgba(59,130,246,.95));
+      box-shadow: 0 22px 55px rgba(245,158,11,.16);
+    }
+
+    /* subtle “skyline vibe” blocks on cards */
+    .sky{
+      position:absolute; inset:auto 0 0 0; height: 54%;
+      opacity:.65;
+      filter: blur(0px);
+      transform: translateY(10px);
+      z-index:1;
+    }
+    .uaeGrad{ background: radial-gradient(500px 240px at 70% 20%, rgba(245,158,11,.28), transparent 60%),
+                       radial-gradient(620px 280px at 35% 35%, rgba(59,130,246,.20), transparent 60%); }
+    .pkGrad{  background: radial-gradient(520px 240px at 40% 25%, rgba(34,197,94,.20), transparent 62%),
+                       radial-gradient(620px 280px at 70% 40%, rgba(59,130,246,.16), transparent 62%); }
+
+    .miniSkyline{
+      position:absolute; left:0; right:0; bottom:-10px;
+      height: 190px;
+      opacity:.18;
+      pointer-events:none;
+    }
+
+    footer{padding:22px 0 28px; color:rgba(255,255,255,.58); font-size:13px; text-align:center}
+
+    @media (max-width: 860px){
+      nav{display:none}
+      .grid{grid-template-columns: 1fr}
+      .card{min-height: 250px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container top">
+      <div class="brand">
+        <div class="logo">HR</div>
+        <div>Hafiz Realty</div>
+        <span class="pill">UAE • Pakistan</span>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="uae.html">UAE</a>
+        <a href="pakistan.html">Pakistan</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container hero">
+    <h1>Choose your market.</h1>
+    <div class="sub">
+      A premium real-estate presence across the UAE and Pakistan. Explore pages designed with skyline-style visuals
+      (Dubai for UAE, Islamabad for Pakistan) — clean, modern, and fast.
+    </div>
+
+    <div class="grid">
+      <a class="card" href="uae.html" aria-label="UAE Properties">
+        <div class="sky uaeGrad"></div>
+        <svg class="miniSkyline" viewBox="0 0 1200 240" preserveAspectRatio="none">
+          <path fill="white" d="M0 220V180h50v-30h25v20h30v-70h18v-30h18v110h22v-60h20v100h35v-90h22v-45h30v135h18v-70h25v90h30v-120h22v30h18v110h40v-50h18v70h30v-140h22v160h22v-55h18v75h45v-95h22v115h70v-40h28v60h60V220H0z"/>
+        </svg>
+        <div class="inner">
+          <div class="k">Market</div>
+          <div class="t">UAE Properties</div>
+          <div class="d">Dubai / Abu Dhabi focus — skyline-inspired look, luxury feel, simple sections.</div>
+          <div class="btnrow">
+            <span class="btn primary">Open UAE Page</span>
+            <span class="btn">View sections</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="pakistan.html" aria-label="Pakistan Properties">
+        <div class="sky pkGrad"></div>
+        <svg class="miniSkyline" viewBox="0 0 1200 240" preserveAspectRatio="none">
+          <path fill="white" d="M0 220V190h60v-40h22v20h26v-70h18v-20h18v90h35v-60h22v90h28v-110h18v30h18v80h30v-40h18v60h26v-130h22v150h30v-80h18v100h38v-50h18v70h45v-60h22v80h70v-35h30v55h80V220H0z"/>
+        </svg>
+        <div class="inner">
+          <div class="k">Market</div>
+          <div class="t">Pakistan Properties</div>
+          <div class="d">Islamabad / Lahore / Karachi — skyline-style visuals with a clean corporate layout.</div>
+          <div class="btnrow">
+            <span class="btn primary">Open Pakistan Page</span>
+            <span class="btn">View sections</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <footer>© <span id="y"></span> Hafiz Realty. All rights reserved.</footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
