@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hafiz Realty | Pakistan Properties</title>
-  <meta name="description" content="Pakistan properties — Islamabad skyline style page." />
+  <title>Hafiz Realty | Pakistan</title>
+  <meta name="description" content="Hafiz Realty Pakistan — residential and commercial opportunities." />
   <style>
     :root{
       --bg:#070b14;
@@ -54,7 +54,8 @@
       border:1px solid rgba(255,255,255,.14);
       background: rgba(255,255,255,.06);
       padding:8px 10px;border-radius:999px;
-      color:var(--muted); font-size:13px; font-weight:800;
+      color:rgba(255,255,255,.74); font-size:13px; font-weight:800;
+      white-space: nowrap;
     }
 
     .hero{ padding: 30px 0 8px; position:relative; overflow:hidden; }
@@ -68,7 +69,7 @@
     }
     .heroInner{ padding: 22px; position:relative; z-index:2; }
     h1{ margin:0; font-size: clamp(32px,4.1vw,52px); line-height:1.06; letter-spacing:-.8px; }
-    .sub{ margin-top:12px; color:var(--muted); font-size:16px; max-width: 70ch; }
+    .sub{ margin-top:12px; color:var(--muted); font-size:16px; max-width: 76ch; }
     .chips{ margin-top:14px; display:flex; flex-wrap:wrap; gap:10px; }
     .chip{
       border:1px solid rgba(255,255,255,.14);
@@ -76,10 +77,10 @@
       padding:8px 10px;border-radius:999px;
       color:rgba(255,255,255,.72); font-size:13px; font-weight:800;
     }
-    .skyline{
+    .shape{
       position:absolute; left:0; right:0; bottom:-8px;
       height: 240px;
-      opacity:.22;
+      opacity:.20;
       pointer-events:none;
       z-index:1;
     }
@@ -134,65 +135,64 @@
 
   <main class="container hero">
     <div class="heroBox">
-      <!-- “Islamabad skyline vibe” (stylized silhouette) -->
-      <svg class="skyline" viewBox="0 0 1200 260" preserveAspectRatio="none" aria-hidden="true">
+      <svg class="shape" viewBox="0 0 1200 260" preserveAspectRatio="none" aria-hidden="true">
         <path fill="white" d="M0 240V205h70v-45h24v20h28v-80h18v-20h18v95h44v-55h22v80h30v-120h18v35h18v85h36v-50h18v70h30v-150h22v170h34v-85h18v105h46v-60h18v80h52v-70h22v90h72v-40h30v60h80V240H0z"/>
       </svg>
 
       <div class="heroInner">
         <h1>Pakistan Properties</h1>
         <div class="sub">
-          Islamabad-inspired skyline style — clean sections for listings and categories. Swap in your real inventory when ready.
+          Hafiz Realty Pakistan supports residential and commercial opportunities across major cities, with a clear layout for browsing and shortlisting.
         </div>
         <div class="chips">
-          <div class="chip">Islamabad</div>
-          <div class="chip">Lahore</div>
-          <div class="chip">Karachi</div>
-          <div class="chip">Launching Soon</div>
+          <div class="chip">Houses</div>
+          <div class="chip">Plots</div>
+          <div class="chip">Commercial</div>
+          <div class="chip">Advisory Support</div>
         </div>
       </div>
     </div>
 
     <section>
       <div class="titleRow">
-        <h2>Featured Categories</h2>
-        <span>Sample layout (edit anytime)</span>
+        <h2>Services</h2>
+        <span>What we support</span>
       </div>
 
       <div class="grid">
         <div class="card">
-          <h3>Houses</h3>
-          <p>Family living • Secure areas • Modern designs.</p>
+          <h3>Buying Support</h3>
+          <p>Guidance on shortlisting, evaluation, and next steps.</p>
         </div>
         <div class="card">
-          <h3>Plots</h3>
-          <p>Investment options • Good locations • Growth potential.</p>
+          <h3>Selling Support</h3>
+          <p>Listing preparation, positioning, and buyer screening support.</p>
         </div>
         <div class="card">
-          <h3>Commercial</h3>
-          <p>Shops • Offices • Business-friendly areas.</p>
+          <h3>Rentals & Leasing</h3>
+          <p>Support for rental opportunities and leasing discussions.</p>
         </div>
       </div>
     </section>
 
     <section>
       <div class="titleRow">
-        <h2>Sample Listings</h2>
-        <span>Replace with real listings</span>
+        <h2>Featured Opportunities</h2>
+        <span>Highlights</span>
       </div>
 
       <div class="grid">
         <div class="card">
-          <h3>5 Marla House — Islamabad</h3>
-          <p>Parking • Modern finish • Secure area.</p>
+          <h3>House (5 Marla)</h3>
+          <p>Modern finish • Parking available • Secure neighborhood.</p>
         </div>
         <div class="card">
-          <h3>Plot — Prime Location</h3>
-          <p>Ideal for investment • Easy access • High demand.</p>
+          <h3>Investment Plot</h3>
+          <p>Prime location • Strong potential • Easy access.</p>
         </div>
         <div class="card">
-          <h3>Shop — Commercial Hub</h3>
-          <p>Foot traffic • Visibility • Business-ready.</p>
+          <h3>Commercial Shop / Office</h3>
+          <p>Business zone • Good foot traffic • High visibility.</p>
         </div>
       </div>
     </section>
